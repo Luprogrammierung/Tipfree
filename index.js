@@ -9,6 +9,7 @@ var Iframe = document.getElementById('odsp_wdg_iframeoddspedia-widget-odds-compa
 
 
 Iframe.onload = function(){
-    window.alert("test");
+    alert("test");
+    setTimeout(400);
     removeItems();
 }
