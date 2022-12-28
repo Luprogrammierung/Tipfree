@@ -7,13 +7,17 @@ for(var i = 0; i<frontodds.length;i++){
 }
 }
 function main(){
-
-var Iframe = document.getElementById('odsp_wdg_iframeoddspedia-widget-odds-comparison-popular-false-sports-false-leagues-false');
-
     removeItems();
 
 }
-setTimeout(function () {
-    main()
-  }, 500)
+
+function init(){
+    var Iframe = null;
+    while(Iframe == null){ Iframe = document.getElementById('odsp_wdg_iframeoddspedia-widget-odds-comparison-popular-false-sports-false-leagues-false');}
+    
+    setTimeout(function () {
+        main();
+    }, 500)
+}
+init();
 
