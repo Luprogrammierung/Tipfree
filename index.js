@@ -1,7 +1,8 @@
-var Iframe = null;
+var Iframe = document.getElementById('odsp_wdg_iframeoddspedia-widget-odds-comparison-popular-false-sports-false-leagues-false');
 function removeItems(){
-    console.log("test");
-    Iframe.contentWindow.document.querySelectorAll('.bg-main-200');
+    //document.getElementById(iframeId).contentWindow.document.getElementById(elementId);
+
+    const frontodds = document.querySelectorAll('.bg-main-200');
     console.log(frontodds.length);
 for(var i = 0; i<frontodds.length;i++){
     
@@ -9,8 +10,8 @@ for(var i = 0; i<frontodds.length;i++){
 }
 }
 function main(){
-    removeItems();
-
+    console.log(Iframe.window);
+    Iframe.contentWindow.eval('function foo(){ alert("test"); }');
 }
 
 function init(){
@@ -20,9 +21,11 @@ function init(){
             init();
         },500)
     }
+    else{
     setTimeout(function () {
         main();
     }, 500)
+}
 }
 init();
 
